@@ -13,6 +13,9 @@ const express = require('express');
 // https://www.npmjs.com/package/hbs
 const hbs = require('hbs');
 
+// Require and run the seed script
+require('./seeds/movies.seed');
+
 const app = express();
 
 // ℹ️ This function is getting exported from the config folder. It runs most middlewares
@@ -27,6 +30,10 @@ app.locals.title = `${capitalized(projectName)}- Generated with Ironlauncher`;
 // 👇 Start handling routes here
 const index = require('./routes/index');
 app.use('/', index);
+
+
+const movies = require('./routes/movie.routes');
+app.use('/movies', movies)
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require('./error-handling')(app);
