@@ -1,0 +1,23 @@
+<div>
+   <form action="/movies/{{details.id}}/update" method="POST">
+        <label for="first-name-input">Title:</label>
+        <input id="first-name-input" type="text" name="title"  value="{{details.title}}"/>
+
+        <label for="first-name-input">Director:</label>
+        <input id="first-name-input" type="text" name="director" value="{{details.director}}"/>
+
+        <label for="first-name-input">Stars:</label>
+        <input id="first-name-input" type="text" name="stars" value="{{details.stars}}"/>
+
+        <label for="first-name-input">Image:</label>
+        <input id="first-name-input" type="text" name="image" value="{{details.image}}"/>
+
+        <label for="first-name-input">Description:</label>
+        <input id="first-name-input" type="text" name="description" value="{{details.description}}"/>
+
+        <label for="first-name-input">Showtimes:</label>
+        <input id="first-name-input" type="text" name="showtimes" value="{{details.showtimes}}"/>
+        
+        <button type="submit">Update movie</button>
+    </form>
+</div>
